@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descubra quantos pontos faltam para você passar de ano!"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-black"
+        android:id="@+id/tv_Titulo"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nome"
+        android:hint="Seu nome"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Titulo"
+        android:inputType="text"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_mediaGeral"
+        android:hint="Qual a média?"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Titulo"
+        app:layout_constraintLeft_toRightOf="@+id/et_nome"
+        android:inputType="numberDecimal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_media01"
+        android:hint="Média 1°"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_media02"
+        android:hint="Média 2°"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        app:layout_constraintLeft_toRightOf="@id/et_media01"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_media03"
+        android:hint="Média 3°"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        app:layout_constraintLeft_toRightOf="@id/et_media02"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quanto falta"
+        android:textSize="30sp"
+        android:id="@+id/bt_calcular"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/et_media02"
+        android:gravity="center_horizontal"
+        android:onClick="calcular" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#000000"
+        android:id="@+id/tv_resultado"
+        app:layout_constraintTop_toBottomOf="@id/bt_calcular"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
